@@ -1,5 +1,5 @@
 {
-  "name": "YESP Tech - Web Development Company",
+  "name": "YESP Tech - Web Development Company Erode",
   "short_name": "Yesp Tech",
   "description": "Leading web development and eCommerce company in Erode, Tamil Nadu. Custom web solutions, mobile apps, and digital marketing services.",
   "start_url": "/",
@@ -7,10 +7,10 @@
   "background_color": "#ffffff",
   "theme_color": "#2563eb",
   "orientation": "portrait-primary",
-  "categories": ["business", "productivity", "technology"],
+  "scope": "/",
   "lang": "en-US",
   "dir": "ltr",
-  "scope": "/",
+  "categories": ["business", "productivity", "technology"],
   "icons": [
     {
       "src": "/yesp-logo.png",
@@ -69,19 +69,6 @@
           "type": "image/png"
         }
       ]
-    },
-    {
-      "name": "About",
-      "short_name": "About",
-      "description": "Learn more about Yesp Tech",
-      "url": "/about",
-      "icons": [
-        {
-          "src": "/yesp-logo.png",
-          "sizes": "96x96",
-          "type": "image/png"
-        }
-      ]
     }
   ],
   "screenshots": [
@@ -101,5 +88,11 @@
     }
   ],
   "related_applications": [],
-  "prefer_related_applications": false
+  "prefer_related_applications": false,
+  "edge_side_panel": {
+    "preferred_width": 400
+  },
+  "launch_handler": {
+    "client_mode": "navigate-existing"
+  }
 }
