@@ -1,0 +1,80 @@
+# Robots.txt for Yesp Tech - Web Development Company
+# https://yesptech.in
+
+User-agent: *
+Allow: /
+
+# Specific rules for major search engines
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Slurp
+Allow: /
+Crawl-delay: 2
+
+User-agent: DuckDuckBot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Baiduspider
+Allow: /
+Crawl-delay: 2
+
+User-agent: YandexBot
+Allow: /
+Crawl-delay: 1
+
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+User-agent: WhatsApp
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+# Block specific paths if needed
+# Disallow: /admin/
+# Disallow: /private/
+# Disallow: /temp/
+# Disallow: /*.json$
+# Disallow: /api/
+
+# Allow specific important files
+Allow: /sitemap.xml
+Allow: /robots.txt
+Allow: /manifest.json
+Allow: /*.css$
+Allow: /*.js$
+Allow: /*.png$
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.gif$
+Allow: /*.svg$
+Allow: /*.ico$
+Allow: /*.webp$
+
+# Sitemap location
+Sitemap: https://yesptech.in/sitemap.xml
+
+# Additional sitemaps if you have them
+# Sitemap: https://yesptech.in/sitemap-blog.xml
+# Sitemap: https://yesptech.in/sitemap-services.xml
+# Sitemap: https://yesptech.in/sitemap-products.xml
+
+# Host directive (optional, but recommended)
+Host: https://yesptech.in
+
+# Crawl-delay for all bots (in seconds)
+Crawl-delay: 1
