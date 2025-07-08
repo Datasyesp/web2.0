@@ -33,14 +33,9 @@ export const metadata: Metadata = {
     "next.js development",
     "web development services tamil nadu",
   ],
-  authors: [{ name: "Yesp Tech", url: "https://yesptech.in" }],
+  authors: [{ name: "Yesp Tech" }],
   creator: "Yesp Tech",
   publisher: "Yesp Tech",
-  formatDetection: {
-    email: false,
-    address: false,
-    telephone: false,
-  },
   robots: {
     index: true,
     follow: true,
@@ -90,10 +85,6 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: "https://yesptech.in",
-    languages: {
-      "en-US": "https://yesptech.in",
-      "ta-IN": "https://yesptech.in/ta",
-    },
   },
   category: "technology",
   classification: "Web Development Services",
@@ -112,8 +103,6 @@ export const metadata: Metadata = {
     "doc-type": "Web Page",
     "doc-class": "Living Document",
     "doc-rights": "Public",
-    "linkedin:owner": "yesptech",
-    "pinterest-rich-pin": "true",
   },
   icons: {
     icon: [
@@ -130,13 +119,8 @@ export const metadata: Metadata = {
     statusBarStyle: "default",
     title: "Yesp Tech",
   },
-  applicationName: "Yesp Tech",
-  referrer: "origin-when-cross-origin",
-  appLinks: {
-    web: {
-      url: "https://yesptech.in",
-      should_fallback: true,
-    },
+  formatDetection: {
+    telephone: false,
   },
 }
 
@@ -145,200 +129,202 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
-  const structuredData = {
+  const organizationSchema = {
     "@context": "https://schema.org",
-    "@graph": [
+    "@type": "Organization",
+    "@id": "https://yesptech.in/#organization",
+    name: "YESP Tech",
+    alternateName: "Yesp Tech",
+    description:
+      "Leading web development and eCommerce company in Erode, Tamil Nadu specializing in custom web solutions, mobile apps, and digital marketing services.",
+    url: "https://yesptech.in",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://yesptech.in/yesp-logo.png",
+      width: 400,
+      height: 400,
+    },
+    image: "https://yesptech.in/yesp-logo.png",
+    telephone: "+91-9751755757",
+    email: "info@yesptech.in",
+    foundingDate: "2021",
+    numberOfEmployees: "10-50",
+    slogan: "Transforming Ideas into Digital Reality",
+    contactPoint: [
       {
-        "@type": "Organization",
-        "@id": "https://yesptech.in/#organization",
-        name: "YESP Tech",
-        alternateName: "Yesp Tech",
-        description:
-          "Leading web development and eCommerce company in Erode, Tamil Nadu specializing in custom web solutions, mobile apps, and digital marketing services.",
-        url: "https://yesptech.in",
-        logo: {
-          "@type": "ImageObject",
-          url: "https://yesptech.in/yesp-logo.png",
-          width: 400,
-          height: 400,
-        },
-        image: "https://yesptech.in/yesp-logo.png",
+        "@type": "ContactPoint",
         telephone: "+91-9751755757",
-        email: "info@yesptech.in",
-        foundingDate: "2021",
-        numberOfEmployees: "10-50",
-        slogan: "Transforming Ideas into Digital Reality",
-        contactPoint: [
-          {
-            "@type": "ContactPoint",
-            telephone: "+91-9751755757",
-            contactType: "customer service",
-            availableLanguage: ["English", "Tamil"],
-            areaServed: "IN",
-            hoursAvailable: {
-              "@type": "OpeningHoursSpecification",
-              dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-              opens: "09:00",
-              closes: "18:00",
-            },
-          },
-        ],
-        address: {
-          "@type": "PostalAddress",
-          addressLocality: "Erode",
-          addressRegion: "Tamil Nadu",
-          addressCountry: "IN",
-          postalCode: "638001",
-        },
-        areaServed: [
-          {
-            "@type": "State",
-            name: "Tamil Nadu",
-          },
-          {
-            "@type": "Country",
-            name: "India",
-          },
-        ],
-        serviceArea: {
-          "@type": "GeoCircle",
-          geoMidpoint: {
-            "@type": "GeoCoordinates",
-            latitude: 11.341,
-            longitude: 77.7172,
-          },
-          geoRadius: "100000",
-        },
-        sameAs: [
-          "https://www.linkedin.com/company/yesptech",
-          "https://twitter.com/yesptech",
-          "https://www.facebook.com/yesptech",
-          "https://www.instagram.com/yesptech",
-        ],
-        hasOfferCatalog: {
-          "@type": "OfferCatalog",
-          name: "Web Development Services",
-          itemListElement: [
-            {
-              "@type": "Offer",
-              itemOffered: {
-                "@type": "Service",
-                name: "Web Development",
-                description: "Custom web development services",
-              },
-            },
-            {
-              "@type": "Offer",
-              itemOffered: {
-                "@type": "Service",
-                name: "eCommerce Development",
-                description: "Professional eCommerce solutions",
-              },
-            },
-            {
-              "@type": "Offer",
-              itemOffered: {
-                "@type": "Service",
-                name: "Mobile App Development",
-                description: "iOS and Android app development",
-              },
-            },
-          ],
-        },
-      },
-      {
-        "@type": "LocalBusiness",
-        "@id": "https://yesptech.in/#localbusiness",
-        name: "YESP Tech",
-        image: "https://yesptech.in/yesp-logo.png",
-        telephone: "+91-9751755757",
-        email: "info@yesptech.in",
-        url: "https://yesptech.in",
-        address: {
-          "@type": "PostalAddress",
-          streetAddress: "Erode",
-          addressLocality: "Erode",
-          addressRegion: "Tamil Nadu",
-          postalCode: "638001",
-          addressCountry: "IN",
-        },
-        geo: {
-          "@type": "GeoCoordinates",
-          latitude: 11.341,
-          longitude: 77.7172,
-        },
-        openingHoursSpecification: [
-          {
-            "@type": "OpeningHoursSpecification",
-            dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-            opens: "09:00",
-            closes: "18:00",
-          },
-        ],
-        priceRange: "$$",
-        aggregateRating: {
-          "@type": "AggregateRating",
-          ratingValue: "4.9",
-          reviewCount: "50",
-        },
-      },
-      {
-        "@type": "WebSite",
-        "@id": "https://yesptech.in/#website",
-        url: "https://yesptech.in",
-        name: "YESP Tech",
-        description: "Leading web development and eCommerce company in Erode",
-        publisher: {
-          "@id": "https://yesptech.in/#organization",
-        },
-        potentialAction: [
-          {
-            "@type": "SearchAction",
-            target: {
-              "@type": "EntryPoint",
-              urlTemplate: "https://yesptech.in/search?q={search_term_string}",
-            },
-            "query-input": "required name=search_term_string",
-          },
-        ],
-        inLanguage: "en-US",
-      },
-      {
-        "@type": "ProfessionalService",
-        "@id": "https://yesptech.in/#service",
-        name: "YESP Tech - Web Development Services",
-        image: "https://yesptech.in/yesp-logo.png",
-        telephone: "+91-9751755757",
-        address: {
-          "@type": "PostalAddress",
-          addressLocality: "Erode",
-          addressRegion: "Tamil Nadu",
-          addressCountry: "IN",
-        },
-        geo: {
-          "@type": "GeoCoordinates",
-          latitude: 11.341,
-          longitude: 77.7172,
-        },
-        url: "https://yesptech.in",
-        serviceType: "Web Development",
-        areaServed: "Tamil Nadu, India",
-        hasOfferCatalog: {
-          "@type": "OfferCatalog",
-          name: "Web Development Services",
-          itemListElement: [
-            {
-              "@type": "Offer",
-              itemOffered: {
-                "@type": "Service",
-                name: "Custom Web Development",
-                description: "Tailored web solutions for businesses",
-              },
-            },
-          ],
+        contactType: "customer service",
+        availableLanguage: ["English", "Tamil"],
+        areaServed: "IN",
+        hoursAvailable: {
+          "@type": "OpeningHoursSpecification",
+          dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+          opens: "09:00",
+          closes: "18:00",
         },
       },
     ],
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Erode",
+      addressRegion: "Tamil Nadu",
+      addressCountry: "IN",
+      postalCode: "638001",
+    },
+    areaServed: [
+      {
+        "@type": "State",
+        name: "Tamil Nadu",
+      },
+      {
+        "@type": "Country",
+        name: "India",
+      },
+    ],
+    serviceArea: {
+      "@type": "GeoCircle",
+      geoMidpoint: {
+        "@type": "GeoCoordinates",
+        latitude: 11.341,
+        longitude: 77.7172,
+      },
+      geoRadius: "100000",
+    },
+    sameAs: [
+      "https://www.linkedin.com/company/yesptech",
+      "https://twitter.com/yesptech",
+      "https://www.facebook.com/yesptech",
+      "https://www.instagram.com/yesptech",
+    ],
+    hasOfferCatalog: {
+      "@type": "OfferCatalog",
+      name: "Web Development Services",
+      itemListElement: [
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Web Development",
+            description: "Custom web development services",
+          },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "eCommerce Development",
+            description: "Professional eCommerce solutions",
+          },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Mobile App Development",
+            description: "iOS and Android app development",
+          },
+        },
+      ],
+    },
+  }
+
+  const localBusinessSchema = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "@id": "https://yesptech.in/#localbusiness",
+    name: "YESP Tech",
+    image: "https://yesptech.in/yesp-logo.png",
+    telephone: "+91-9751755757",
+    email: "info@yesptech.in",
+    url: "https://yesptech.in",
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "Erode",
+      addressLocality: "Erode",
+      addressRegion: "Tamil Nadu",
+      postalCode: "638001",
+      addressCountry: "IN",
+    },
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: 11.341,
+      longitude: 77.7172,
+    },
+    openingHoursSpecification: [
+      {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+        opens: "09:00",
+        closes: "18:00",
+      },
+    ],
+    priceRange: "$$",
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "4.9",
+      reviewCount: "50",
+    },
+  }
+
+  const websiteSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": "https://yesptech.in/#website",
+    url: "https://yesptech.in",
+    name: "YESP Tech",
+    description: "Leading web development and eCommerce company in Erode",
+    publisher: {
+      "@id": "https://yesptech.in/#organization",
+    },
+    potentialAction: [
+      {
+        "@type": "SearchAction",
+        target: {
+          "@type": "EntryPoint",
+          urlTemplate: "https://yesptech.in/search?q={search_term_string}",
+        },
+        "query-input": "required name=search_term_string",
+      },
+    ],
+    inLanguage: "en-US",
+  }
+
+  const professionalServiceSchema = {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "@id": "https://yesptech.in/#service",
+    name: "YESP Tech - Web Development Services",
+    image: "https://yesptech.in/yesp-logo.png",
+    telephone: "+91-9751755757",
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Erode",
+      addressRegion: "Tamil Nadu",
+      addressCountry: "IN",
+    },
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: 11.341,
+      longitude: 77.7172,
+    },
+    url: "https://yesptech.in",
+    serviceType: "Web Development",
+    areaServed: "Tamil Nadu, India",
+    hasOfferCatalog: {
+      "@type": "OfferCatalog",
+      name: "Web Development Services",
+      itemListElement: [
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Custom Web Development",
+            description: "Tailored web solutions for businesses",
+          },
+        },
+      ],
+    },
   }
 
   return (
@@ -346,7 +332,6 @@ export default function RootLayout({
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link rel="preconnect" href="https://www.google-analytics.com" />
         <link rel="dns-prefetch" href="//fonts.googleapis.com" />
         <link rel="dns-prefetch" href="//www.google-analytics.com" />
         <link rel="dns-prefetch" href="//www.googletagmanager.com" />
@@ -361,7 +346,13 @@ export default function RootLayout({
         <meta name="msapplication-TileColor" content="#2563eb" />
         <meta name="msapplication-config" content="/browserconfig.xml" />
 
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }} />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(professionalServiceSchema) }}
+        />
       </head>
       <body className={inter.className}>
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
